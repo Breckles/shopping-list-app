@@ -1,19 +1,19 @@
 enum CATEGORIES {
-  Aisles = 1,
+  Aisles,
   Fruits_and_Vegetables,
   Meat,
   Dairy,
   Deli,
   Bakery,
+  Unknown,
 }
 
-export class Ingredient {
+export class Item {
   private _name: string;
-  private _category: CATEGORIES;
+  private _category = CATEGORIES.Unknown;
 
-  constructor(ingName: string, category: CATEGORIES) {
+  constructor(ingName: string) {
     this._name = ingName;
-    this._category = category;
   }
 
   public get name(): string {

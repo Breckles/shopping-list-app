@@ -1,1 +1,4 @@
-<p>shopping-list works!</p>
+<mat-list>
+  <app-shopping-list-item *ngFor="let item of list; index as i"
+                          [item]="item"></app-shopping-list-item>
+</mat-list>
