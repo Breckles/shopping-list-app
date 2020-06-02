@@ -21,9 +21,14 @@ export class ShoppingListComponent implements OnInit {
         this._list = list;
       }
     );
-    console.log(this.shoppingListService.shoppingList);
+  }
 
-    console.log(this.list);
+  public onPrintList() {
+    console.log(this._list);
+  }
+
+  ngOnDestroy() {
+    this.listSubscription.unsubscribe();
   }
 
   public get list(): Item[] {

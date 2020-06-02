@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { Item } from "src/app/shared/item.model";
+import { ShoppingListService } from "../shopping-list.service";
 
 @Component({
   selector: "app-shopping-list-item",
@@ -7,9 +8,23 @@ import { Item } from "src/app/shared/item.model";
   styleUrls: ["./shopping-list-item.component.css"],
 })
 export class ShoppingListItemComponent implements OnInit {
-  @Input("item") item!: Item;
+  @Input("index") index!: number;
 
-  constructor() {}
+  public item!: Item;
 
-  ngOnInit(): void {}
+  categories: string[] = Item.Categories;
+
+  constructor(private sLS: ShoppingListService) {}
+
+  ngOnInit(): void {
+    this.item = this.sLS.getListItem(this.index);
+  }
+
+  onRemoveItem() {
+    this.sLS.removeFromShoppingList(this.index);
+  }
+
+  onCategorySelect() {
+    this.sLS.editListItem(this.item, this.index);
+  }
 }

@@ -1,4 +1,6 @@
-<mat-list>
-  <app-shopping-list-item *ngFor="let item of list; index as i"
-                          [item]="item"></app-shopping-list-item>
-</mat-list>
+<app-shopping-list-edit></app-shopping-list-edit>
+
+<app-shopping-list-item *ngFor="let item of list; index as i"
+                        [index]="i"></app-shopping-list-item>
+
+<!-- <button (click)="onPrintList()">Print List</button> -->
