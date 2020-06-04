@@ -31,10 +31,6 @@
   width: 50vh;
 }
 
-
-
-
-
 .wrapper {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);

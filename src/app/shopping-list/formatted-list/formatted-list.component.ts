@@ -9,8 +9,6 @@ import { ActivatedRoute, Params } from "@angular/router";
 })
 export class FormattedListComponent implements OnInit {
   public categorizedItems: Map<string, string[]> = new Map();
-  // public categorizedItems!: { category: string; items: string[] }[];
-  // private categorizedItems!: Params;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -30,10 +28,6 @@ export class FormattedListComponent implements OnInit {
     for (let category of categoriesAndItemsAsStrings) {
       this.categorizedItems.set(category[0], category[1].split(","));
     }
-
-    console.log(categoriesAndItemsAsStrings);
-    console.log("final map: " + this.categorizedItems);
-    console.log(Array.from(this.categorizedItems));
   }
 
   showValue(value: any) {
