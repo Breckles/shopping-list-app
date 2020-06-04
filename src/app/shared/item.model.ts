@@ -1,3 +1,8 @@
+export interface ItemProperties {
+  _name: string;
+  _category: string;
+}
+
 export class Item {
   private _name: string;
   private _category: string;
@@ -18,6 +23,10 @@ export class Item {
     } else {
       this._category = "Unknown";
     }
+  }
+
+  public static createItemFromItemProperties(item: ItemProperties) {
+    return new Item(item._name, item._category);
   }
 
   public get name(): string {

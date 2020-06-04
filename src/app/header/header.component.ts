@@ -19,4 +19,9 @@ export class HeaderComponent implements OnInit {
 
     this.router.navigate(["formatted-list"], { queryParams: categorizedItems });
   }
+
+  onResetList() {
+    localStorage.removeItem("shopping-list");
+    this.sLS.resetList();
+  }
 }

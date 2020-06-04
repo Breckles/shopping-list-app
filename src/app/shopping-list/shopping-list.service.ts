@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { Item } from "../shared/item.model";
+import { Injectable, OnInit } from "@angular/core";
+import { Item, ItemProperties } from "../shared/item.model";
 import { Subject } from "rxjs";
 
 @Injectable({
@@ -57,13 +57,28 @@ export class ShoppingListService {
 
   constructor() {}
 
+  // ngOnInit() {
+  //   let list = localStorage.getItem("shopping-list");
+  //   if (list) {
+  //     this._shoppingList = JSON.parse(list);
+  //   } else {
+  //     localStorage.setItem("shopping-list", "");
+  //   }
+  //   console.log(JSON.stringify(this._shoppingList));
+  //   console.log("IIIIIIIIIIIIIIIIIIIIIIII");
+  // }
+
   public addToShoppingList(item: Item) {
+    console.log(item);
+
     this._shoppingList.unshift(item);
+    localStorage.setItem("shopping-list", JSON.stringify(this._shoppingList));
     this._shoppingListEdited.next([...this._shoppingList]);
   }
 
   public removeFromShoppingList(index: number) {
     this._shoppingList.splice(index, 1);
+    localStorage.setItem("shopping-list", JSON.stringify(this._shoppingList));
     this._shoppingListEdited.next([...this._shoppingList]);
   }
 
@@ -73,6 +88,7 @@ export class ShoppingListService {
 
   public editListItem(item: Item, index: number) {
     this._shoppingList[index] = item;
+    localStorage.setItem("shopping-list", JSON.stringify(this._shoppingList));
     this._shoppingListEdited.next([...this._shoppingList]);
   }
 
@@ -89,6 +105,18 @@ export class ShoppingListService {
     // console.log(categorizedItemsArray);
 
     return categorizedItemsArray;
+  }
+
+  public restoreSessionShoppingList(shoppingList: ItemProperties[]) {
+    // this._shoppingList = shoppingList;
+    // for some reason, typecasting doesn't work here, which causes issues, so i do this instead
+    for (let item of shoppingList) {
+      this._shoppingList.push(Item.createItemFromItemProperties(item));
+    }
+  }
+
+  public resetList() {
+    this._shoppingList = [];
   }
 
   public get shoppingList(): Item[] {

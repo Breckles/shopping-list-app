@@ -3,12 +3,18 @@
     <a class="navbar-brand"
        routerLink="">Shopping List</a>
     <ul class="nav navbar-nav ml-auto">
-      <a (click)="onNavigateToFormattedList()">
+      <span>
         <button mat-raised-button
-                [color]="'primary'">
+                [color]="'warn'"
+                (click)="onResetList()">
+          Reset List
+        </button>
+        <button mat-raised-button
+                [color]="'primary'"
+                (click)="onNavigateToFormattedList()">
           View Formatted List
         </button>
-      </a>
+      </span>
     </ul>
   </nav>
 </div>
