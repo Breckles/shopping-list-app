@@ -68,10 +68,20 @@ export class ShoppingListService {
   //   console.log("IIIIIIIIIIIIIIIIIIIIIIII");
   // }
 
-  public addToShoppingList(item: Item) {
+  public addItemToShoppingList(item: Item) {
     console.log(item);
 
     this._shoppingList.unshift(item);
+    localStorage.setItem("shopping-list", JSON.stringify(this._shoppingList));
+    this._shoppingListEdited.next([...this._shoppingList]);
+  }
+
+  public addItemsToShoppingList(items: Item[]) {
+    console.log(items);
+
+    for (const item of items) {
+      this._shoppingList.unshift(item);
+    }
     localStorage.setItem("shopping-list", JSON.stringify(this._shoppingList));
     this._shoppingListEdited.next([...this._shoppingList]);
   }
@@ -117,6 +127,7 @@ export class ShoppingListService {
 
   public resetList() {
     this._shoppingList = [];
+    this._shoppingListEdited.next([...this._shoppingList]);
   }
 
   public get shoppingList(): Item[] {

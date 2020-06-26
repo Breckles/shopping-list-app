@@ -16,7 +16,7 @@ export class ShoppingListEditComponent implements OnInit {
   onAddItem() {
     console.log(this.item);
 
-    this.sLS.addToShoppingList(this.item);
+    this.sLS.addItemToShoppingList(this.item);
     this.item = new Item("");
   }
 }

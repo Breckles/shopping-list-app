@@ -12,6 +12,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatInputModule } from "@angular/material/input";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { MatDividerModule } from "@angular/material/divider";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -20,6 +21,7 @@ import { HeaderComponent } from "./header/header.component";
 import { ShoppingListEditComponent } from "./shopping-list/shopping-list-edit/shopping-list-edit.component";
 import { ShoppingListItemComponent } from "./shopping-list/shopping-list-item/shopping-list-item.component";
 import { FormattedListComponent } from "./shopping-list/formatted-list/formatted-list.component";
+import { BasicsListComponent } from "./basics-list/basics-list.component";
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { FormattedListComponent } from "./shopping-list/formatted-list/formatted
     ShoppingListEditComponent,
     ShoppingListItemComponent,
     FormattedListComponent,
+    BasicsListComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { FormattedListComponent } from "./shopping-list/formatted-list/formatted
     MatInputModule,
     MatGridListModule,
     MatDividerModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
