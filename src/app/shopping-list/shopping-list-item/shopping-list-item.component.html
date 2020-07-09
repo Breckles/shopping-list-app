@@ -1,4 +1,20 @@
-<mat-card>
+<div>
+  {{item.name}}
+  <button (click)="onRemoveItem()">Remove</button>
+  <h5>
+    <label for="categorySelect">Category</label>
+  </h5>
+  <select [(ngModel)]="item.category"
+          (ngModelChange)="onCategorySelect()"
+          id="categorySelect">
+    <option *ngFor="let cat of categories"
+            [value]="cat">
+      {{cat}}
+    </option>
+  </select>
+</div>
+
+<!-- <mat-card>
   <mat-card-content>
     <mat-card-title>
       {{item.name}}
@@ -24,4 +40,4 @@
       </mat-form-field>
     </mat-card-actions>
   </mat-card-content>
-</mat-card>
+</mat-card> -->

@@ -1,19 +1,10 @@
-<mat-form-field>
-  <mat-label for="itemName">Item Name</mat-label>
-  <input matInput
-         type="text"
-         id="itemName"
-         [(ngModel)]="item.name">
-  <button mat-button
-          *ngIf="item.name"
-          matSuffix
-          mat-icon-button
-          aria-label="Clear"
-          (click)="item.name=''">
-    <mat-icon>close</mat-icon>
-  </button>
-</mat-form-field>
-<button mat-mini-fab
-        (click)="onAddItem()">
-  <mat-icon>add</mat-icon>
+<label for="itemName">Item Name</label>
+<input type="text"
+       id="itemName"
+       [(ngModel)]="item.name">
+<button *ngIf="item.name"
+        (click)="item.name=''">
+</button>
+<button (click)="onAddItem()">
+  Add
 </button>

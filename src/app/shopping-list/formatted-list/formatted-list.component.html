@@ -1,44 +1,12 @@
-<!-- <mat-grid-list [cols]="2"
-               role="list">
-  <mat-grid-tile role="listitem"
-                 *ngFor="let cat of categorizedItems | keyvalue">
-    <mat-grid-tile-header>{{cat.key}}</mat-grid-tile-header>
-    <div class="container-fluid">
-      <ul class="fixed-top">
-        <div *ngFor="let item of cat.value">
-          <li>{{item}}</li>
-          <mat-divider></mat-divider>
-        </div>
-      </ul>
-    </div>
-  </mat-grid-tile>
+<div id="categoryList"
+     *ngFor="let cat of categorizedItems | keyvalue">
 
-</mat-grid-list> -->
+  <h4>{{ cat.key }}</h4>
 
-
-<!-- <div class="wrapper">
-  <div *ngFor="let cat of categorizedItems | keyvalue">
-    <h3>
-      {{cat.key}}
-    </h3>
-    <mat-list>
-      <mat-list-item *ngFor="let item of cat.value">
-        {{item}}
-      </mat-list-item>
-    </mat-list>
-  </div>
-</div> -->
-
-<div class="box">
-  <div id="categoryList"
-       *ngFor="let cat of categorizedItems | keyvalue">
-    <mat-list>
-      <h4>{{cat.key}}</h4>
-      <mat-list-item *ngFor="let item of cat.value">
-        {{item}}
-        <mat-divider></mat-divider>
-      </mat-list-item>
-    </mat-list>
-    <br>
-  </div>
+  <ul>
+    <li *ngFor="let item of cat.value">
+      {{item}}
+    </li>
+  </ul>
+  <br>
 </div>

@@ -1,25 +1,18 @@
-<div class="container">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand"
-         routerLink="">Shopping List</a>
-      <ul>
-        <li><a routerLink="basics-list">Basics List</a></li>
-      </ul>
-      <ul class="nav navbar-nav ml-auto">
-        <span>
-          <button mat-raised-button
-                  [color]="'warn'"
-                  (click)="onResetList()">
-            Reset List
-          </button>
-          <button mat-raised-button
-                  [color]="'primary'"
-                  (click)="onNavigateToFormattedList()">
-            View Formatted List
-          </button>
-        </span>
-      </ul>
-    </nav>
-  </header>
-</div>
+<header>
+  <nav>
+    <a routerLink="">Shopping List</a>
+    <ul>
+      <li><a routerLink="basics-list">Basics List</a></li>
+    </ul>
+    <ul>
+      <span>
+        <button (click)="onResetList()">
+          Reset List
+        </button>
+        <button (click)="onNavigateToFormattedList()">
+          View Formatted List
+        </button>
+      </span>
+    </ul>
+  </nav>
+</header>
