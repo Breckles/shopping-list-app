@@ -3,6 +3,8 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
@@ -27,6 +29,7 @@ import { BasicsListComponent } from "./basics-list/basics-list.component";
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
