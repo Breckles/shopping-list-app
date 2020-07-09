@@ -60,7 +60,6 @@ export class BasicsListComponent implements OnInit {
 
     for (let i = 0; i < items.length; i++) {
       if (items[i].checked) {
-        console.log(items[i]);
         this.basicsToAdd.unshift(this.basicsList[+items[i].value]);
       }
     }
