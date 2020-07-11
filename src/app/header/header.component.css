@@ -1,1 +1,63 @@
+header {
+  text-align: center;
+}
 
+.logo {
+  background: black;
+  padding: 0.5rem 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  background: lightgray;
+
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 1px solid black;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+
+@media screen and (min-width: 40rem) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .logo {
+    height: 100%;
+    padding-top: 0.8rem;
+  }
+
+  nav {
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: end;
+    padding-right: 0.5rem;
+  }
+
+  nav ul li {
+    border-bottom: none;
+    padding-left: 0.5rem;
+    border-left: 1px solid black;
+    margin: 0.3rem 0;
+  }
+
+
+}

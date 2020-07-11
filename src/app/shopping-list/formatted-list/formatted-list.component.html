@@ -1,12 +1,18 @@
-<div id="categoryList"
-     *ngFor="let cat of categorizedItems | keyvalue">
+ <div class="container">
 
-  <h4>{{ cat.key }}</h4>
+   <div class="categoryList"
+        *ngFor="let cat of categorizedItems | keyvalue">
 
-  <ul>
-    <li *ngFor="let item of cat.value">
-      {{item}}
-    </li>
-  </ul>
-  <br>
-</div>
+     <h4>{{ cat.key }}</h4>
+
+     <ul>
+       <li *ngFor="let item of cat.value">
+         {{item}}
+       </li>
+     </ul>
+
+     <br>
+
+   </div>
+
+ </div>

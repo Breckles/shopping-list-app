@@ -1,18 +1,21 @@
 <header>
-  <nav>
+
+  <div class="logo">
     <a routerLink="">Shopping List</a>
-    <ul>
-      <li><a routerLink="basics-list">Basics List</a></li>
-    </ul>
-    <ul>
-      <span>
-        <button (click)="onResetList()">
-          Reset List
-        </button>
-        <button (click)="onNavigateToFormattedList()">
-          View Formatted List
-        </button>
-      </span>
-    </ul>
+  </div>
+
+  <nav>
+
+    <div class="links">
+      <ul>
+        <li>
+          <a routerLink="basics-list">Basics List</a>
+        </li>
+      </ul>
+    </div>
+
+
+
   </nav>
+
 </header>

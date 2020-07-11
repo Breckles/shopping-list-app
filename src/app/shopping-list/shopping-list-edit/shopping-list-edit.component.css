@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  flex: auto;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+input {
+  margin-right: 0.5rem;
+  flex: auto;
+}
+
+button {
+  border-radius: 0.5rem;
+  flex: auto;
+}
+
+input[type='search'] {
+  font-size: 1rem;
+}
+
+
+@media screen and (min-width: 40rem) {}

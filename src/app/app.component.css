@@ -1,1 +1,22 @@
+main {
+  margin-bottom: 5rem;
+  padding: 0.5rem;
+}
 
+@media print {
+
+  app-header,
+  app-footer {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    padding: 0;
+  }
+
+  @page {
+    margin: 100cm;
+    padding: 0;
+  }
+}

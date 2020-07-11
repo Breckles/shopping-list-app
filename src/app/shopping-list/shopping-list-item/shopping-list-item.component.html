@@ -1,43 +1,20 @@
-<div>
-  {{item.name}}
-  <button (click)="onRemoveItem()">Remove</button>
-  <h5>
-    <label for="categorySelect">Category</label>
-  </h5>
-  <select [(ngModel)]="item.category"
-          (ngModelChange)="onCategorySelect()"
-          id="categorySelect">
-    <option *ngFor="let cat of categories"
-            [value]="cat">
-      {{cat}}
-    </option>
-  </select>
-</div>
+<div class="container">
 
-<!-- <mat-card>
-  <mat-card-content>
-    <mat-card-title>
-      {{item.name}}
-    </mat-card-title>
-    <mat-card-actions [align]="'end'">
-      <button mat-mini-fab
-              (click)="onRemoveItem()">
-        <mat-icon>remove</mat-icon>
-      </button>
-      <hr>
-      <mat-form-field>
-        <h5>
-          <label for="categorySelect">Category</label>
-        </h5>
-        <mat-select [(ngModel)]="item.category"
-                    (ngModelChange)="onCategorySelect()"
-                    id="categorySelect">
-          <mat-option *ngFor="let cat of categories"
-                      [value]="cat">
-            {{cat}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </mat-card-actions>
-  </mat-card-content>
-</mat-card> -->
+  <div class="name">
+    <h4>{{item.name}}</h4>
+    <button (click)="onRemoveItem()">Remove</button>
+  </div>
+
+  <div class="category">
+    <label for="categorySelect">Category</label>
+    <select [(ngModel)]="item.category"
+            (ngModelChange)="onCategorySelect()"
+            id="categorySelect">
+      <option *ngFor="let cat of categories"
+              [value]="cat">
+        {{cat}}
+      </option>
+    </select>
+  </div>
+
+</div>

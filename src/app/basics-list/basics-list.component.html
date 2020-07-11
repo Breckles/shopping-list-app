@@ -1,10 +1,16 @@
- <ul>
-   <li *ngFor="let item of basicsList; index as i">
-     <input type="checkbox"
-            name="{{ item.name }}"
-            id="{{ item.name }}"
-            value="{{ i }}">
-     <label for="{{ item.name }}">{{ item.name }}</label>
-   </li>
-   <li><button (click)="onAddItemsToList()">Add Basics To List</button></li>
- </ul>
+<main>
+  <h2>Basics</h2>
+  <hr>
+  <ul>
+    <li *ngFor="let item of basicsList; index as i">
+      <label for="{{ item.name }}">{{ item.name }}</label>
+      <input type="checkbox"
+             name="{{ item.name }}"
+             id="{{ item.name }}"
+             value="{{ i }}">
+    </li>
+  </ul>
+  <div class="button">
+    <button (click)="onAddItemsToList()">Add Basics To List</button>
+  </div>
+</main>

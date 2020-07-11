@@ -1,10 +1,10 @@
-<label for="itemName">Item Name</label>
-<input type="text"
-       id="itemName"
-       [(ngModel)]="item.name">
-<button *ngIf="item.name"
-        (click)="item.name=''">
-</button>
-<button (click)="onAddItem()">
-  Add
-</button>
+<form>
+  <label for="itemName">Item Name:</label>
+  <input type="search"
+         id="itemName"
+         name="itemName"
+         [(ngModel)]="item.name">
+  <button (click)="onAddItem()">
+    Add
+  </button>
+</form>

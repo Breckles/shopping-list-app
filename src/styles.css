@@ -1,12 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/* @import "~bootstrap/dist/css/bootstrap.min.css"; */
 
-html,
-body {
-  height: 100%;
+* {
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+@media print {
+  body {
+    max-width: 100%;
+    margin: 0.2in 0 0;
+  }
+
+  body::before {
+    display: block;
+    content: 'Shopping List';
+    margin: 0 3cm 1cm;
+    padding-bottom: 2mm;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px dotted grey;
+  }
+
+  @page {
+    margin: 0;
+    padding: 0;
+  }
 }

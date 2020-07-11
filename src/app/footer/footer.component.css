@@ -1,0 +1,58 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 960px;
+  background: lightgrey;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+
+  margin: 0;
+}
+
+li {
+  border-top: 1px solid black;
+  padding: 0.5rem 0;
+}
+
+li div {
+  margin: 0 auto;
+  cursor: pointer;
+  width: fit-content;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+
+.action_button {
+  background-color: cyan;
+  border: 1px solid black;
+}
+
+.reset {
+  background-color: lightcoral;
+  border: 1px solid black;
+}
+
+
+@media screen and (min-width: 40rem) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  li {
+    border: none;
+    margin: 0.5rem;
+  }
+
+  .reset {
+    flex: 1;
+  }
+
+  .action_button {
+    flex: 1;
+  }
+}

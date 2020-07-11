@@ -13,6 +13,7 @@ import { ShoppingListEditComponent } from "./shopping-list/shopping-list-edit/sh
 import { ShoppingListItemComponent } from "./shopping-list/shopping-list-item/shopping-list-item.component";
 import { FormattedListComponent } from "./shopping-list/formatted-list/formatted-list.component";
 import { BasicsListComponent } from "./basics-list/basics-list.component";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BasicsListComponent } from "./basics-list/basics-list.component";
     ShoppingListItemComponent,
     FormattedListComponent,
     BasicsListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

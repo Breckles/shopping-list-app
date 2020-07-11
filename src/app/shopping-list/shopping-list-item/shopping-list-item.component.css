@@ -1,0 +1,37 @@
+.container {
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.4rem;
+  max-width: 100%;
+}
+
+.name {
+  border-right: 1px solid black;
+}
+
+.name,
+.category {
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+h4 {
+  margin: 0.2rem 0 0.5rem;
+}
+
+button {
+  background: lightcoral;
+  border-radius: 0.5rem;
+}
+
+label {
+  display: block;
+  margin: 0.2rem 0 0.5rem;
+  max-width: 100%;
+}
+
+select {
+  max-width: 100%;
+}
