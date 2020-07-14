@@ -25,20 +25,29 @@ li {
   }
 }
 
-@media print and (min-width: 1in) {
+@media print {
   .container {
     column-count: 2;
-    /* gap: 1.5in; */
+    gap: 1.5in;
     font-size: 0.75rem;
     margin: 0;
   }
 
   .categoryList {
     break-inside: avoid;
+  }
+
+  .categoryList:first-child {
     margin: -1rem 0 0 0;
   }
 
   li {
-    padding: 2mm;
+    text-align: center;
+    padding: 2mm 0;
   }
+
+  h4 {
+    margin-bottom: 0;
+  }
+
 }

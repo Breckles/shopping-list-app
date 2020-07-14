@@ -14,7 +14,6 @@ header {
 
 nav {
   background: lightgray;
-
 }
 
 nav ul {
@@ -48,7 +47,7 @@ nav a {
   nav {
     display: flex;
     border-bottom: 1px solid black;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 0.5rem;
   }
 

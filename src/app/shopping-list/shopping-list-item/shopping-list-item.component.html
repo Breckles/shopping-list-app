@@ -5,8 +5,11 @@
     <button (click)="onRemoveItem()">Remove</button>
   </div>
 
-  <div class="category">
-    <label for="categorySelect">Category</label>
+  <div class="category"
+       [style.background-image]="getImage()">
+    <label for="categorySelect">
+      <h4>Category</h4>
+    </label>
     <select [(ngModel)]="item.category"
             (ngModelChange)="onCategorySelect()"
             id="categorySelect">

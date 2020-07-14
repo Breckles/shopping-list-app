@@ -27,4 +27,13 @@ export class ShoppingListItemComponent implements OnInit {
   onCategorySelect() {
     this.sLS.editListItem(this.item, this.index);
   }
+
+  getImage() {
+    return (
+      "url(" +
+      "../../../assets/images/" +
+      this.item.category.replace(/\s/g, "") +
+      ".jpg)"
+    );
+  }
 }

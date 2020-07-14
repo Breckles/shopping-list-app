@@ -5,20 +5,37 @@
   grid-template-columns: 1fr 1fr;
   padding: 0.4rem;
   max-width: 100%;
+  background: lightgrey;
 }
 
 .name {
   border-right: 1px solid black;
+  margin: 0 0.5rem;
+  max-width: 100%;
 }
 
-.name,
 .category {
-  padding: 0 1rem;
+  /* background image is set inline in the html in order to make it dynamic on a
+  per category basis */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: -0.4rem 0.25rem;
+  padding: 0.425rem 0.25rem 0;
   max-width: 100%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 h4 {
   margin: 0.2rem 0 0.5rem;
+}
+
+.category h4 {
+  color: tomato;
+  text-shadow: 0.1rem 0.1rem 0 black,
+    -0.1rem 0.1rem 0.1rem black,
+    0.1rem -0.1rem 0.1rem black,
+    -0.1rem -0.1rem 0.1rem black;
 }
 
 button {
@@ -28,7 +45,7 @@ button {
 
 label {
   display: block;
-  margin: 0.2rem 0 0.5rem;
+  margin: 0 0 0.5rem;
   max-width: 100%;
 }
 

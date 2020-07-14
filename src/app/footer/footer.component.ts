@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute, Params } from "@angular/router";
+import { Observable } from "rxjs";
 
 @Component({
   selector: "app-footer",
@@ -9,7 +10,11 @@ import { Router } from "@angular/router";
   styleUrls: ["./footer.component.css"],
 })
 export class FooterComponent implements OnInit {
-  constructor(private sLS: ShoppingListService, private router: Router) {}
+  constructor(
+    private sLS: ShoppingListService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {}
 
@@ -24,5 +29,11 @@ export class FooterComponent implements OnInit {
   onResetList() {
     localStorage.removeItem("shopping-list");
     this.sLS.resetList();
+
+    this.router.navigate([], {
+      relativeTo: this.route,
+      queryParams: {},
+    });
+    console.log(this.route);
   }
 }

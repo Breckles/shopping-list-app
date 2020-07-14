@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import "~bootstrap/dist/css/bootstrap.min.css"; */
 
+app-formatted-list,
+app-footer,
+app-header {
+  display: block;
+}
+
 * {
   box-sizing: border-box;
 }

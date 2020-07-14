@@ -3,13 +3,13 @@ footer {
   bottom: 0;
   width: 100%;
   max-width: 960px;
-  background: lightgrey;
+  background: grey;
+  border-top: 1px solid black;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
-
   margin: 0;
 }
 
