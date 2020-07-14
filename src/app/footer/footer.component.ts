@@ -27,13 +27,14 @@ export class FooterComponent implements OnInit {
   }
 
   onResetList() {
-    localStorage.removeItem("shopping-list");
-    this.sLS.resetList();
+    if (window.confirm("Are you sure you want to reset the shopping list?")) {
+      localStorage.removeItem("shopping-list");
+      this.sLS.resetList();
 
-    this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: {},
-    });
-    console.log(this.route);
+      this.router.navigate([], {
+        relativeTo: this.route,
+        queryParams: {},
+      });
+    }
   }
 }
